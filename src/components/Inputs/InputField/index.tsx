@@ -1,4 +1,4 @@
-import { Input as AntdInput } from "antd";
+import { Input } from "antd";
 import type { FC, InputHTMLAttributes } from "react";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -9,7 +9,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input: FC<InputProps> = ({
+export const TextField: FC<InputProps> = ({
   label,
   placeholder,
   value,
@@ -25,7 +25,7 @@ const Input: FC<InputProps> = ({
       >
         {label}
       </label>
-      <AntdInput
+      <Input
         className="rounded-lg border border-[#969696] text-base h-[48px] dark:bg-darkBlack dark:focus:bg-darkBlack dark:text-lightGray outline-white placeholder:text-lightGray w-full"
         placeholder={placeholder}
         defaultValue={value}

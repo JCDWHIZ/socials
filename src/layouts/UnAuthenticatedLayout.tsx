@@ -1,4 +1,4 @@
-import MobileUnAuthenticatedLayout from "components/Inputs/layouts/UnAuthenticaedLayout/mobile";
+import MobileUnAuthenticatedLayout from "components/layouts/UnauthenticaedLayout/mobile";
 import { useWindowSize } from "hooks/useWindowsize";
 
 function UnAuthenticatedLayout() {

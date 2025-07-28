@@ -1,5 +1,5 @@
-import Desktop from "components/Inputs/layouts/AuthenticatedLayout/desktop";
-import Mobile from "components/Inputs/layouts/AuthenticatedLayout/mobile";
+import Desktop from "components/layouts/AuthenticatedLayout/desktop";
+import Mobile from "components/layouts/AuthenticatedLayout/mobile";
 import { useWindowSize } from "hooks/useWindowsize";
 
 const AuthenticatedLayout = () => {
