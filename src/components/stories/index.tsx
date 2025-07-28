@@ -1,12 +1,13 @@
-import MobileHome from "components/modules/home/mobile";
 import { useWindowSize } from "hooks/useWindowsize";
+import React from "react";
+import MobileStories from "./mobile";
 
-function Home() {
+function Stories() {
   const { width } = useWindowSize();
 
   const returnHeader = () => {
     if (width < 640) {
-      return <MobileHome />;
+      return <MobileStories />;
     } else if (width >= 768 && width < 1024) {
       return <h1 className="p-4">Tablet Header</h1>;
     } else {
@@ -18,4 +19,4 @@ function Home() {
   return returnHeader();
 }
 
-export default Home;
+export default Stories;

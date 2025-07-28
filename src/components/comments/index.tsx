@@ -1,21 +1,21 @@
-import MobileHome from "components/modules/home/mobile";
 import { useWindowSize } from "hooks/useWindowsize";
+import React from "react";
+import MobileComments from "./mobile";
 
-function Home() {
+function Comments() {
   const { width } = useWindowSize();
 
   const returnHeader = () => {
     if (width < 640) {
-      return <MobileHome />;
+      return <MobileComments />;
     } else if (width >= 768 && width < 1024) {
       return <h1 className="p-4">Tablet Header</h1>;
     } else {
-      // return <DesktopPost />;
-      return "hellw";
+      //   return <DesktopPost />;
     }
   };
 
   return returnHeader();
 }
 
-export default Home;
+export default Comments;

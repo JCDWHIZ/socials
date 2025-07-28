@@ -1,12 +1,12 @@
-import MobileHome from "components/modules/home/mobile";
+import MobileUser from "components/modules/user";
 import { useWindowSize } from "hooks/useWindowsize";
 
-function Home() {
+function User() {
   const { width } = useWindowSize();
 
   const returnHeader = () => {
     if (width < 640) {
-      return <MobileHome />;
+      return <MobileUser />;
     } else if (width >= 768 && width < 1024) {
       return <h1 className="p-4">Tablet Header</h1>;
     } else {
@@ -18,4 +18,4 @@ function Home() {
   return returnHeader();
 }
 
-export default Home;
+export default User;

@@ -1,8 +1,7 @@
-import Desktop from "components/Inputs/layouts/AuthenticatedLayout/desktop";
-import Mobile from "components/Inputs/layouts/AuthenticatedLayout/mobile";
+import MobileUnAuthenticatedLayout from "components/Inputs/layouts/UnAuthenticaedLayout/mobile";
 import { useWindowSize } from "hooks/useWindowsize";
 
-const AuthenticatedLayout = () => {
+function UnAuthenticatedLayout() {
   const { width } = useWindowSize();
 
   // const returnHeader = () => {
@@ -16,13 +15,13 @@ const AuthenticatedLayout = () => {
   // };
   const returnHeader = () => {
     if (width < 640) {
-      return <Mobile />;
+      return <MobileUnAuthenticatedLayout />;
     } else if (width > 640) {
       return <h1>Not available on desktop yet</h1>;
     }
   };
 
   return returnHeader();
-};
+}
 
-export default AuthenticatedLayout;
+export default UnAuthenticatedLayout;

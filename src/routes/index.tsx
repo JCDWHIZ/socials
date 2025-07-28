@@ -3,6 +3,7 @@ import AuthenticatedLayout from "layouts/AuthenticatedLayout";
 import { lazy } from "react";
 
 const Home = lazy(() => import("modules/Home"));
+const User = lazy(() => import("modules/User"));
 
 interface Props {
   children?: React.ReactNode;
@@ -28,6 +29,10 @@ const MainRoutes = () => {
             {
               index: true,
               element: <Home />,
+            },
+            {
+              path: "user/:id",
+              element: <User />,
             },
           ],
         },
