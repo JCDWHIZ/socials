@@ -2,6 +2,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import AuthenticatedLayout from "layouts/AuthenticatedLayout";
 import { lazy } from "react";
 import UnAuthenticatedLayout from "layouts/UnAuthenticatedLayout";
+import MobileUserDetails from "components/modules/user/mobile";
 
 const Home = lazy(() => import("modules/Authenticated/Home"));
 const User = lazy(() => import("modules/Authenticated/User"));
@@ -36,6 +37,10 @@ const MainRoutes = () => {
             {
               path: "user/:id",
               element: <User />,
+            },
+            {
+              path: "mobile-user",
+              element: <MobileUserDetails />,
             },
           ],
         },
